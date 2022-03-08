@@ -1,19 +1,41 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 var schema = new mongoose.Schema({
-    name : {
-        type : String,
-        required: true
-    },
-    email : {
-        type: String,
-        required: true,
-        unique: true
-    },
-    gender : String,
-    status : String
-})
+  name: {
+    type: String,
+    required: true,
+  },
+  phone: {
+    type: String,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  aadhar: {
+    type: String,
+  },
+  address: {
+    type: String,
+  },
+  city: {
+    type: String,
+  },
+  state: {
+    type: String,
+  },
+  pincode: {
+    type: String,
+  },
+  category: {
+    type: String,
+  },
+  description: {
+    type: String,
+  },
+});
 
-const Userdb = mongoose.model('userdb', schema);
+const Userdb = mongoose.model("userdb", schema);
 
 module.exports = Userdb;
